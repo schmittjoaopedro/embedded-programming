@@ -20,3 +20,15 @@ and actuate controllers by sending signals from the WebApp and reading values fr
 The image below shows an example of the previously programmed board being controlled.
 
 <img alt="Online Board control panel" height="600" src="wireway/resources/online-board-control-panel.png" width="800"/>
+
+## [Line Follower Robot](line_follower_robot)
+
+The line follower project was developed with the intention to participate on the RoboCore Winter Challenge event.
+The codes stored in the `line_follower_robot` folder were the ones used on the championship.
+You can see an example of the robot performing by watching the video below:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=j_pv9lDzAO8" target="_blank"><img src="https://img.youtube.com/vi/j_pv9lDzAO8/0.jpg" alt="IMAGE ALT TEXT HERE" width="800" height="600" border="10" /></a>
+
+More details about the algorithm and calculations can be found on the following links:
+* [Algorithm](line_follower_robot/line_follower_15_seconds_PID.ino)
+* [Calculations project](line_follower_robot/ROBOCORE%20Winter/FollowLine-Final.pptx)

@@ -1,0 +1,57 @@
+String data, toCompare, latitudeString, longitudeString;
+int latDeg, longDeg;
+float latMin, longMin, latitude, longitude;
+
+
+void setup(){
+  Serial1.begin(38400);
+  Serial.begin(38400);
+}
+
+
+void loop(){ 
+  char readChar = 0;
+  if(Serial1.available()){
+    readChar = Serial1.read();
+    data += readChar;
+    if(readChar == '\n') {
+        toCompare = data.substring(0,6);
+        if(toCompare.equals("$GPGLL")) {
+            //$GPGLL,2627.99470,S,04906.85799,W,000122.00,A,A*64
+
+            //2627.99470,S,04906.85799,W,000122.00,A,A*64
+            data = data.substring(data.indexOf(',') + 1, data.length());
+            
+            //2627.99470
+            latitudeString = data.substring(0, data.indexOf(','));
+            
+            //S,04906.85799,W,000122.00,A,A*64
+            data = data.substring(data.indexOf(',') + 1, data.length());
+            
+            //04906.85799,W,000122.00,A,A*64
+            data = data.substring(data.indexOf(',') + 1, data.length());
+
+            //04906.85799
+            longitudeString = data.substring(0, data.indexOf(','));
+
+            latDeg = latitudeString.substring(0, latitudeString.indexOf('.') - 2).toInt();
+            latMin = latitudeString.substring(latitudeString.indexOf('.') - 2, latitudeString.length()).toFloat();
+
+            longDeg = longitudeString.substring(0, longitudeString.indexOf('.') - 2).toInt();
+            longMin = longitudeString.substring(longitudeString.indexOf('.') - 2, longitudeString.length()).toFloat();
+
+            latitude = latDeg + (latMin/60);
+            longitude = longDeg + (longMin/60);
+
+            Serial.print("Lat: ");
+            Serial.print(latitude, 5);
+            Serial.print("\t");
+
+            Serial.print("Long: ");
+            Serial.println(longitude, 5);
+        }
+        data = "";
+    }
+  }
+
+}
