@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scriptApp">
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trilha Brasil">
+        <meta name="author" content="João Pedro Schmitt">
+        <link rel="icon" href="img/icon.svg" >
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/css/global.css" rel="stylesheet" />
+        <link href="/css/dashboard/register.css" rel="stylesheet" />
+        <link href="/lib/combobox/dist/css/select.css" rel="stylesheet" />
+        <link href="/lib/tree-folder/_styles.css" rel="stylesheet" />
+        <style type="text/css" media="screen">
+            #editor { 
+                width: 100%;
+                height: 500px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                font-size: 15px;
+            }
+        </style>
+
+    </head>
+
+    <body ng-controller="scriptCtrl" class="ng-cloak">
+        <div class="container container-new-user">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- Combo seleceção dashboards -->
+                    <label>Select a dashboard:&nbsp&nbsp</label>
+                    <ui-select ng-change="loadTree()" ng-model="dashboard.selected" theme="select2" ng-disabled="disabled" style="width: 100%;" title="Choose a dashboard">
+                        <ui-select-match placeholder="Choose a dashboard" style="height: 35px;">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="dashboard in dashboards | propsFilter: {name: $select.search}">
+                            <div ng-bind-html="dashboard.name | highlight: $select.search"></div>
+                            <small>
+                                description: {{dashboard.description}}
+                            </small>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>File path</label>
+                        <input type="text" class="form-control" ng-model="filepath" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>File name:</label>
+                        <input type="text" class="form-control" ng-model="filename" />
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>&nbsp</label>
+                        <button class="form-control btn-info" ng-click="newScript()">New Script</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-3" >
+                    <div id="document" style="overflow-x:auto ; overflow-y: auto; padding-bottom:10px;">
+                        <label id="title">User Scripts</label>
+                        <ol class="tree" id="documentTree">
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div id="editor">
+//PROGRAM HERE YOUR CONFIGURATION
+function setup() {}
+
+//PROGRAM HERE YOUR LOGIC
+function loop() {}</div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>&nbsp</label>
+                            <button class="form-control btn-success" ng-click="saveCurrent()">Save</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>&nbsp</label>
+                            <button class="form-control btn-success" ng-click="useThisScript()">Use This Script</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/header.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-strap/angular-strap.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/lib/ace/ace.js" charset="utf-8"></script>
+    <script src="/lib/combobox/dist/js/select.js"></script>
+    <script type="text/javascript" src="/js/script/script.js"></script>
+</html>

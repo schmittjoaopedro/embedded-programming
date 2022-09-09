@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="viewDashboardApp">
+	<head>
+		<title>Home</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trilha Brasil">
+        <meta name="author" content="João Pedro Schmitt">
+        <link rel="icon" href="img/icon.svg" >
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/css/global.css" rel="stylesheet" />
+        <link href="/css/dashboard/register.css" rel="stylesheet" />
+	</head>
+	<body ng-controller="ViewDashboardCtrl" class="ng-cloak">
+
+        <div class="container">
+            <div class="row">
+                <div id="content"></div>
+            </div>
+        </div>
+
+	</body>
+    <script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/header.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-strap/angular-strap.min.js"></script>
+    <script type="text/javascript" src="/js/ide/api.js"></script>
+    <script type="text/javascript" src="/js/dashboard/socketManager.js"></script>
+    <script type="text/javascript" src="/js/dashboard/view.js"></script>
+</html>

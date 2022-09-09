@@ -1,0 +1,29 @@
+<style type="text/css" media="screen">
+	#editor {
+		width: 100%;
+		height: 300px;
+	}
+</style>
+<h1>SOURCE EDITOR</h1>
+<label>User: </label><input id="user" />
+<label>Dashboard: </label><input id="dashboard" />
+<button id="save">Save</button>
+<button id="refresh">Refresh</button>
+<button id="upload">Upload</button>
+<pre id="editor">function setup() {
+
+}
+
+function loop() {
+
+}</pre>
+<div id="log"></div>
+
+<script src="/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/ide/ide.js" type="text/javascript" charset="utf-8"></script>
+<script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var editor = ace.edit("editor");
+	editor.setTheme("ace/theme/twilight");
+	editor.getSession().setMode("ace/mode/javascript");
+</script>

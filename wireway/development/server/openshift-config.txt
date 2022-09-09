@@ -1,0 +1,18 @@
+MySQL 5.5 database added.  Please make note of these credentials:
+
+       Root User: admin6sFhZFP
+   Root Password: yGy7dCbnvN56
+   Database Name: wireway
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
+
+
+
+
+Please make note of these MySQL credentials again:
+  Root User: admin6sFhZFP
+  Root Password: yGy7dCbnvN56
+URL: https://wireway-schmitt.rhcloud.com/phpmyadmin/

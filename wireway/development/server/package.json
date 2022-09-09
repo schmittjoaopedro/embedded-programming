@@ -1,0 +1,29 @@
+{
+  "name": "wireway",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": ">=1.12.0",
+    "cookie-parser": ">=1.3.4",
+    "debug": ">=2.1.1",
+    "serve-favicon": ">=2.2.0",
+    "express": ">=4.12.2",
+    "express-session": ">=1.10.1",
+    "express-socket.io-session": "latest",
+    "lodash": ">=2.4.1",
+    "mysql": ">=2.6.1",
+    "passport": ">=0.2.1",
+    "passport-local": ">=1.0.0",
+    "password-hash": "latest",
+    "sequelize": "2.0.5",
+    "serve-favicon": ">=2.2.0",
+    "socket.io": "^1.3.5",
+    "swig": ">=1.4.2",
+    "ws": "^0.7.1",
+    "mkdirp": "latest",
+    "glob": "latest"
+  }
+}

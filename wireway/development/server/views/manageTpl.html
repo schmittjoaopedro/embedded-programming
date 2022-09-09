@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="registerTplApp">
+    <head>
+        <title>Home</title> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trilha Brasil">
+        <meta name="author" content="João Pedro Schmitt">
+        <link rel="icon" href="img/icon.svg" >
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/css/global.css" rel="stylesheet" />
+    </head>
+    <body ng-controller="RegisterTplCtrl" class="ng-cloak">
+        <button ng-click="save()">Save</button>
+        <button ng-click="find()">Find</button>
+        <br />
+        <label>ID</label>
+        <br />
+        <input type="text" ng-model="tpl.id"/>
+        <br />
+        <label>ComponentType</label>
+        <br />
+        <input type="text" ng-model="tpl.componentType"/>
+        <br />
+        <label>Description</label>
+        <br />
+        <input type="text" ng-model="tpl.description"/>
+        <br />
+        <br />
+        <label>JS</label>
+        <br />
+        <textarea ng-model="tpl.js" class="form-control" rows="5"></textarea>
+        <br />
+        <label>HTML</label>
+        <br />
+        <textarea ng-model="tpl.html" class="form-control" rows="5"></textarea>
+        <br />
+        <label>CSS</label>
+        <br />
+        <textarea ng-model="tpl.css" class="form-control" rows="5"></textarea>
+        <br />
+        <label>CONFIG HTML</label>
+        <br />
+        <textarea ng-model="tpl.configHtml" class="form-control" rows="5"></textarea>
+        <br />
+        <button ng-click="save()">Save</button>
+        <button ng-click="find()">Find</button>
+    </body>
+    <script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/header.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-strap/angular-strap.min.js"></script>
+    <script type="text/javascript" src="/js/template/register.js"></script>
+</html>

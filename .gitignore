@@ -1,0 +1,10 @@
+.idea
+
+wireway/development/server/node_modules/**/*
+wireway/development/api/puppet/target/**/*
+wireway/development/api/puppet/.classpath
+wireway/development/api/puppet/.project
+wireway/development/api/puppet/.settings/**/*
+wireway/development/Xbee Arduino/xbee-api-master/target/**/*
+wireway/development/Xbee Arduino/XBeeJavaLibrary-master/target/**/*
+wireway/development/Xbee Arduino/XBEE_JAVA/target/**/*

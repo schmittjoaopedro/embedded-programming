@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="registerDashboardApp">
+	<head>
+		<title>Home</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trilha Brasil">
+        <meta name="author" content="João Pedro Schmitt">
+        <link rel="icon" href="img/icon.svg" >
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/css/global.css" rel="stylesheet" />
+        <link href="/css/dashboard/register.css" rel="stylesheet" />
+	</head>
+	<body ng-controller="RegisterDashboardCtrl" class="ng-cloak">
+        <div class="container-fluid container-new-user">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#dashboardModal">New</button>
+            <button class="btn btn-default" data-toggle="modal" data-target="#loadDashboardModal" ng-click="loadDashboards()">Load</button>
+            <button class="btn btn-success" ng-click="saveDashboard()" >Save</button>
+            <button class="btn btn-danger" ng-click="clearDashboard()" >Clear</button>
+            <hr />
+            <div class="row jumbotron">
+                <div class="col-sm-3">
+                    <label>Name: </label><input class="form-control" ng-model="dashboard.name" type="text" />
+                </div>
+                <div class="col-sm-3">
+                    <label>Description: </label><input class="form-control" ng-model="dashboard.description" type="text" />
+                </div>
+                <div class="col-sm-2">
+                    <label>Latitude: </label><input class="form-control" ng-model="dashboard.latitude" type="text" />
+                </div>
+                <div class="col-sm-2">
+                    <label>Longitude: </label><input class="form-control" ng-model="dashboard.longitude" type="text" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-2">
+                    <div ng-repeat="compTemplate in componentTemplate" class="well center-block">
+                        <button class="btn btn-default btn-block" ng-click="instanceWebComponentModal(compTemplate)" data-toggle="modal" data-target="#componentModal">{{compTemplate.componentType}}</button>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div id="content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Load Dashboard -->
+        <div class="modal fade" id="loadDashboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3>Select a Dashboard</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 80%;">Name</th>
+                                        <th style="width: 20%;">#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  ng-repeat="dashboard in dashboards">
+                                        <td style="width: 80%;">
+                                            {{dashboard.name}}
+                                        </td>
+                                        <td scope="row" style="width: 20%;">
+                                            <button type="button" class="btn btn-default" ng-click="loadDashboard(dashboard)" data-dismiss="modal">
+                                                #{{dashboard.id}} Select
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal New Dashboard -->
+        <div class="modal fade" id="dashboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Select Your Template</h4>
+                    </div>
+                    <div class="modal-body" ng-repeat="dashTemplate in dashboardTemplate">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    {{dashTemplate.componentType}} - {{dashTemplate.description}}
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-primary" ng-click="defineDashboard(dashTemplate)" data-dismiss="modal">Use This</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Web Component Dashboard -->
+        <div class="modal fade" id="componentModal" tabindex="-1" role="dialog" aria-labelledby="myComponentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myComponentModalLabel">Configure properties</h4>
+                    </div>
+                    <div class="modal-body" id="compWebFormTemplate">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</body>
+	<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/header.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-strap/angular-strap.min.js"></script>
+    <script type="text/javascript" src="/js/ide/api.js"></script>
+    <script type="text/javascript" src="/js/dashboard/register.js"></script>
+</html>

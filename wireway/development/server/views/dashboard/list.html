@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="viewDashboardApp">
+	<head>
+		<title>Home</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trilha Brasil">
+        <meta name="author" content="João Pedro Schmitt">
+        <link rel="icon" href="img/icon.svg" >
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/css/global.css" rel="stylesheet" />
+        <link href="/css/dashboard/register.css" rel="stylesheet" />
+	</head>
+	<body ng-controller="ViewDashboardCtrl" class="ng-cloak">
+
+        <div class="container">
+            <div class="row">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">#</th>
+                            <th style="width: 15%;">Name</th>
+                            <th style="width: 35%;">Description</th>
+                            <th style="width: 20%;">Latitude</th>
+                            <th style="width: 20%;">Longitude</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="dashboard in dashboards">
+                        <tr>
+                            <th scope="row"><button type="button" class="btn btn-default" ng-click="selectDashboard(dashboard)">#{{dashboard.id}} Select</button></th>
+                            <td>{{dashboard.name}}</td>
+                            <td>{{dashboard.description}}</td>
+                            <td>{{dashboard.latitude}}</td>
+                            <td>{{dashboard.longitude}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+	</body>
+	<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/header.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-strap/angular-strap.min.js"></script>
+    <script type="text/javascript" src="/js/ide/api.js"></script>
+    <script type="text/javascript" src="/js/dashboard/list.js"></script>
+</html>
