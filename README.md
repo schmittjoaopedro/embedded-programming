@@ -32,3 +32,16 @@ You can see an example of the robot performing by watching the video below:
 More details about the algorithm and calculations can be found on the following links:
 * [Algorithm](line_follower_robot/line_follower_15_seconds_PID.ino)
 * [Calculations project](line_follower_robot/ROBOCORE%20Winter/FollowLine-Final.pdf)
+
+## [Robo Wireless (ROBOW)](robo_wireless)
+
+This was an introductory project to embedded-systems programming as part of my graduation.
+I developed a small robot using Arduino that could either be controlled by a remove control or it could be activated the autonomous mode.
+When in the autonomous mode the robot would drive randomly avoiding barriers by using an ultrassonic sensor.
+
+You can see more details on the following links:
+
+* [Project presentation - PT](robo_wireless/final_presentation.pdf)
+* [Robot 1 source code](robo_wireless/report/source_code/Advanced_Robot_One/Advanced_Robot_One.ino)
+* [Robot 2 source code](robo_wireless/report/source_code/Advanced_Robot_Two/Advanced_Robot_Two.ino)
+* [Remote control](robo_wireless/report/source_code/Advanced_Robot_Controller/Advanced_Robot_Controller.ino) 

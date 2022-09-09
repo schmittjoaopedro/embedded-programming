@@ -1,0 +1,23 @@
+metodo Setup(){
+Inicializar a radio frequencia!();
+Iniciar o shield de controle!();
+Iniciar emissao de sinal da radio frequencia!();
+}
+
+metodo Loop(){
+Realizar a leitura dos sinais do controle!;
+if(Botao P6 == Apertado){
+Definir todos robos como controlado!();
+}
+if(Botao P5 == Apertado){
+Definir robo um como controlado!();
+}
+if(Botao P4 == Apertado){
+Definir robo dois como controlado!();
+}
+if(Botao P4 == Apertado){
+Definir todos robos para autonomos();
+}
+
+Enviar valores de leiitura do controle!();
+}

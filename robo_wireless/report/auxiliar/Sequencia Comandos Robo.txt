@@ -1,0 +1,114 @@
+metodo setup(){
+  Inicia ModoPWMSetup()!;
+  Iniciar controlador servo!;
+  Iniciar rádio frequência!;
+  Iniciar contador binário!;
+}
+
+metodo loop(){
+  if (O sinal de radio esta disponivel?) 
+  {
+    while (Ainda disponivel?)
+    {
+      Faz leitura dos valores recebidos do radio!;
+
+      while(Robo esta em modo controlado?){
+
+        Faça leitura e atribua os valores;
+
+        while(Algum comando de movimento foi enviando?){
+         Movimente o robo no movimento do eixo x!;
+         Movimente o robo no movimento do eixo y!;
+         Procure por obstáculos e desvie deles!;
+         Atualize os valores de leitura!;
+        }
+        
+      Atualize os valores de leitura!;
+      Pare de movimentar o robo!;
+      }
+
+      while(O robo está em modo automático?){
+        Ande sozinho, e atualize os valores;
+      }
+      Pare de movimentar o robo!
+    }
+  }
+  Procure por obstáculos e desvie deles!;
+}
+
+
+metodo Desviar de obstaculos(){
+  if(Leitura de distancia do sensor < 20 cm?){
+     Parar motores!;
+     Leitura da distancia de melhor caminho!;
+     if(Leitura da distancia > 0?){
+         Dar a re e virar para a esquerda!;
+     }
+     if(Leitura da distancia < 0?){
+        Dar a re e virar para a direita!;
+     }
+     if(Leitura da distancia == 0?){
+       Dar a re somente!;
+     }
+  }
+}
+
+metodo Ler distancia de menor caminho(){
+Vire o sensor 40 graus!;
+Faça a leitura e a armazene!;
+Espere um segundo;
+Vire o sensor 140 graus!;
+Faça a leitura e a armazene!;
+Espere um segundo;
+Faça a primeira leitura menos a segunda leitura e armazene o valor;
+Posicione o sensor a 90 graus!;
+Retorn o valor da subtração!
+}
+
+metodo Ativar eixo x(){
+if(Valor recebido de X > 220?){
+Movimente o robo para frente!;
+}
+if(Valor recebido de X < 20?){
+Movimente o robo para trás!;
+}
+}
+metodo Ativar eixo y(){
+if(Valor recebido de Y > 220?){
+Movimente o robo para esquerda!;
+}
+if(Valor recebido de Y < 20?){
+Movimente o robo para direita!;
+}
+}
+
+metodo movimentar motores(){
+if(Movimentar para Frente?){
+Movimentar();
+}
+else if(Movimentar para Tras?){
+Movimentar();
+}
+else if(Movimentar para Esquerda?){
+Movimentar();
+}
+else if(Movimetar para Direita?){
+Movimentar();
+}else{
+Movimentar();
+}
+}
+
+metodo Movimentar(){
+Faca através do contador a ignição dos motores definidos!;
+}
+
+metodo Realizar leitura da distancia(){
+Receba a leitura de distancia por ultrassonico!;
+if(A distancia lida > 5000){
+Leitura invalida!;
+}else{
+Divida a leitura por 50;
+}
+Retorne o valor da distancia;
+}
