@@ -13,13 +13,13 @@ Once logged on this WebServer you can scan and register your brand new board and
 The programming was abstract with a high-level API in JavaScript capable of talking to your board through the pre-installed firmware.
 The image below shows an example of a web-programmed board.
 
-<img alt="Online programmed board" height="600" src="wireway/resources/online-programmed-board.png" width="800"/>
+<img alt="Online programmed board" height="300" src="wireway/resources/online-programmed-board.png" width="600"/>
 
 Given the code for your board is ready and uploaded to your Arduino board, after that you could open up your boards dashboards
 and actuate controllers by sending signals from the WebApp and reading values from sensors shown on the screen.
 The image below shows an example of the previously programmed board being controlled.
 
-<img alt="Online Board control panel" height="600" src="wireway/resources/online-board-control-panel.png" width="800"/>
+<img alt="Online Board control panel" height="300" src="wireway/resources/online-board-control-panel.png" width="600"/>
 
 ## [Line Follower Robot](line_follower_robot)
 
