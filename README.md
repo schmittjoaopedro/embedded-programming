@@ -50,3 +50,9 @@ You can see more details on the following links:
 
 This project contains different apps to enable you communicate to Arduino through Serial port (USB) using Java.
 
+## [Humanoid Robot](humanoid_robot)
+
+This project contains the source code used to implement a small walking robot. 
+You can see the working example of the prototype in the video below:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=cX3SXS68PA8" target="_blank"><img src="https://img.youtube.com/vi/cX3SXS68PA8/0.jpg" alt="IMAGE ALT TEXT HERE" width="800" height="600" border="10" /></a>
