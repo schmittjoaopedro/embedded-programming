@@ -1,0 +1,2 @@
+define:
+	D-7:INPUT,S-2:90,D-13:OUTPUT

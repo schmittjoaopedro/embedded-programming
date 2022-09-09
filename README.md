@@ -44,4 +44,9 @@ You can see more details on the following links:
 * [Project presentation - PT](robo_wireless/final_presentation.pdf)
 * [Robot 1 source code](robo_wireless/report/source_code/Advanced_Robot_One/Advanced_Robot_One.ino)
 * [Robot 2 source code](robo_wireless/report/source_code/Advanced_Robot_Two/Advanced_Robot_Two.ino)
-* [Remote control](robo_wireless/report/source_code/Advanced_Robot_Controller/Advanced_Robot_Controller.ino) 
+* [Remote control](robo_wireless/report/source_code/Advanced_Robot_Controller/Advanced_Robot_Controller.ino)
+
+## [Arduino Java Communication](arduino-java-serial-comm)
+
+This project contains different apps to enable you communicate to Arduino through Serial port (USB) using Java.
+

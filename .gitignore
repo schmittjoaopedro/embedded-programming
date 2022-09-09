@@ -8,3 +8,17 @@ wireway/development/api/puppet/.settings/**/*
 wireway/development/Xbee Arduino/xbee-api-master/target/**/*
 wireway/development/Xbee Arduino/XBeeJavaLibrary-master/target/**/*
 wireway/development/Xbee Arduino/XBEE_JAVA/target/**/*
+
+arduino-java-serial-comm/Watchful/Watchful/build/
+arduino-java-serial-comm/Watchful-persistence/build/
+arduino-java-serial-comm/Watchful/Watchful/Watchful/Watchful/build/
+arduino-java-serial-comm/Watchful/Watchful/Watchful/Watchful/nbproject/private/
+arduino-java-serial-comm/persistence/target/
+arduino-java-serial-comm/Web-Watchful/dist/
+arduino-java-serial-comm/remote/target/
+arduino-java-serial-comm/Watchful_Swing/Watchful/dist/
+arduino-java-serial-comm/Watchful_Swing/Watchful/build/
+arduino-java-serial-comm/Watchful Multi Components/WatchfulServer/dist/
+arduino-java-serial-comm/Watchful Multi Components/WatchfulClient/build/
+arduino-java-serial-comm/Watchful Multi Components/WatchfulController/build/
+arduino-java-serial-comm/Watchful Multi Components/WatchfulController/dist/

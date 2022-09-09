@@ -1,0 +1,23 @@
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\joao.schmitt\Desktop\Git Repositories\Framework-Read-Serial-Arduino\Watchful_Swing\Watchful\dist\Watchful.jar</jar>
+  <outfile>C:\Users\joao.schmitt\Desktop\WATCHFUL\Watchful.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <customProcName>false</customProcName>
+  <stayAlive>false</stayAlive>
+  <manifest></manifest>
+  <icon></icon>
+  <jre>
+    <path></path>
+    <minVersion>1.7.0</minVersion>
+    <maxVersion></maxVersion>
+    <bforce32BitsDetection>true</bforce32BitsDetection>
+    <jdkPreference>preferJre</jdkPreference>
+  </jre>
+</launch4jConfig>
