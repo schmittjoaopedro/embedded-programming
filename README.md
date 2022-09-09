@@ -31,4 +31,4 @@ You can see an example of the robot performing by watching the video below:
 
 More details about the algorithm and calculations can be found on the following links:
 * [Algorithm](line_follower_robot/line_follower_15_seconds_PID.ino)
-* [Calculations project](line_follower_robot/ROBOCORE%20Winter/FollowLine-Final.pptx)
+* [Calculations project](line_follower_robot/ROBOCORE%20Winter/FollowLine-Final.pdf)
